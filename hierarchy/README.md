@@ -15,3 +15,8 @@ I measured the capacity, bandwidth and latancy of the local DRAM, local Disk, be
 ### Observations:
 - Local DRAM's bandwidth is the highest with a huge difference, than the bandwidth to the local disk(lowest) and to another node.
 - There is a big difference between the latancy of local DRAM and local Disk comparared to local disk and to another node's DRAM
+  
+![Chart with measurements](HW1%20chart.png)
+
+![Raw Data](data.png)
+
