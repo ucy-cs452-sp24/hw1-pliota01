@@ -1,0 +1,22 @@
+pliota01@node0:~/pliota01-epl452-repo$ fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=fiotest --filename=testfio --bs=4k --iodepth=64 --size=1G --readwrite=read > local_disk_bandwidth.txt
+
+fiotest: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=64
+fio-3.28
+Starting 1 process
+
+fiotest: (groupid=0, jobs=1): err= 0: pid=11452: Sun Feb  4 05:09:24 2024
+  read: IOPS=67.7k, BW=264MiB/s (277MB/s)(1024MiB/3872msec)
+   bw (  KiB/s): min=242280, max=280848, per=99.35%, avg=269037.71, stdev=18052.07, samples=7
+   iops        : min=60570, max=70212, avg=67259.43, stdev=4513.02, samples=7
+  cpu          : usr=10.57%, sys=43.06%, ctx=47789, majf=0, minf=71
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=264MiB/s (277MB/s), 264MiB/s-264MiB/s (277MB/s-277MB/s), io=1024MiB (1074MB), run=3872-3872msec
+
+Disk stats (read/write):
+  sda: ios=136529/0, merge=108519/0, ticks=105842/0, in_queue=105842, util=97.49%

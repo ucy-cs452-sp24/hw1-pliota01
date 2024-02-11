@@ -1,0 +1,26 @@
+pliota01@node0:~/pliota01-epl452-repo$ iperf -s -i 1 -w 4M -u
+pliota01@node1:~$ iperf -c node0 -e -i 1 -u -b 4000m
+
+------------------------------------------------------------
+Client connecting to node0, UDP port 5001 with pid 10025 (1 flows)
+TOS set to 0x0 (Nagle on)
+Sending 1470 byte datagrams, IPG target: 2.94 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.10.1.2%enp65s0f0np0 port 48595 connected with 10.10.1.1 port 5001 (sock=3) on 2024-02-04 05:37:20 (MST)
+[ ID] Interval            Transfer     Bandwidth      Write/Err  PPS
+[  1] 0.0000-1.0000 sec   474 MBytes  3.97 Gbits/sec  0/0   337967 pps
+[  1] 1.0000-2.0000 sec   471 MBytes  3.95 Gbits/sec  0/0   336286 pps
+[  1] 2.0000-3.0000 sec   470 MBytes  3.94 Gbits/sec  0/0   335066 pps
+[  1] 3.0000-4.0000 sec   469 MBytes  3.93 Gbits/sec  0/0   334438 pps
+[  1] 4.0000-5.0000 sec   469 MBytes  3.93 Gbits/sec  0/0   334326 pps
+[  1] 5.0000-6.0000 sec   469 MBytes  3.93 Gbits/sec  0/0   334267 pps
+[  1] 6.0000-7.0000 sec   468 MBytes  3.93 Gbits/sec  0/0   333989 pps
+[  1] 7.0000-8.0000 sec   468 MBytes  3.93 Gbits/sec  0/0   333814 pps
+[  1] 8.0000-9.0000 sec   468 MBytes  3.93 Gbits/sec  0/0   334086 pps
+[  1] 9.0000-10.0000 sec   470 MBytes  3.95 Gbits/sec  0/0   335513 pps
+[  1] 0.0000-10.0000 sec  4.59 GBytes  3.94 Gbits/sec  0/0   334975 pps
+[  1] Sent 3349754 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-9.9999 sec  4.59 GBytes  3.94 Gbits/sec   0.003 ms 0/3349753 (0%)
